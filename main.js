@@ -34,12 +34,12 @@ function calcularArt(){//Función que calcula los elementos a robar
                 suma += contenidoCostal[i];
                 costal -= jsonOrdenado[i];
                 costo += orden2[i][1].costo;
-                console.log("Articulo robado: "+articles);//Se muestran los datos de los articulos robados
+                console.log("Articulo robado: "+articles);//Se muestran los datos de los articulos robados en consola
                 console.log("Precio articulo robado: "+costoUnitario);
                 console.log("Monto robado: "+costo);
                 console.log("Peso articulo robado: "+pesoArticulo);
                 console.log("Peso libre costal: "+costal);
-                var celdaNom = document.createElement("th");
+                var celdaNom = document.createElement("th");//Se muestran los datos de los articulos robados en la tabla
                 newRow.appendChild(celdaNom);
                 var nombre = document.createTextNode(articles);
                 celdaNom.appendChild(nombre);
@@ -60,11 +60,11 @@ function calcularArt(){//Función que calcula los elementos a robar
     for(var x = 0; x < contenidoCostal.length; x++){
         sumaTotal += contenidoCostal[x];
     }
-    var resultados = document.createElement("h4");
+    var resultados = document.createElement("h4");//Se muestra el costo total del botin
     var resultado1 = document.createTextNode("$ "+costo);
     resultados.appendChild(resultado1);
     document.getElementById("resultados").appendChild(resultados);
-    var resultados1 = document.createElement("h4");
+    var resultados1 = document.createElement("h4");//Se muestra el peso total del botín
     var resultado2 = document.createTextNode(sumaTotal+" Kg");
     resultados1.appendChild(resultado2);
     document.getElementById("resultados1").appendChild(resultados1);
@@ -77,7 +77,7 @@ var costal;//Variable para definir la capacidad del costal
 var data = [{}];//Arreglo JSON para guardar los elementos a robar
 function InsertarData(){//Fucnión que permite ingresar los datos
     var numeroArticles = prompt("Ingrese el número de articulos: ");//Total de articulos existentes
-    for(var i = 0; i < numeroArticles; i++){
+    for(var i = 0; i < numeroArticles; i++){//Se ingresan los atributos de cada articulo
         var nombre = prompt("Ingresa el nombre del articulo " + Number(i + 1) +": ");
         var peso = prompt("Ingresa el peso del articulo " + Number(i + 1) +": ");
         var costo = prompt("Ingresa el costo del articulo " + Number(i + 1) +": ");
@@ -89,11 +89,11 @@ function InsertarData(){//Fucnión que permite ingresar los datos
     var cargaCostal;
     cargaCostal = prompt("Ingrese la capacidad de carga de la mochila: ");//Se ingresa la capacidad del costal
     costal = Number(cargaCostal);
-    ordenar(data,"costo");
-    copiarJSON();
-    calcularArt();
+    ordenar(data,"costo");//Función que ordena el JSON
+    copiarJSON();//Se hace una copia del JSON
+    calcularArt();//Función que calcula los articulos a robar
 }
-InsertarData();
+InsertarData();//Función que ingresa los datos
 var end = Date.now();//Termina el contador de ejecucion
 console.log("Tiempo de ejecucion: "+Number(end-start)+" ms");
 var tiempo = document.createTextNode(Number(end-start)+" ms");//Se calcula el tiempo de ejecucion

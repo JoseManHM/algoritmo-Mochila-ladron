@@ -30,7 +30,7 @@
 <body>
     <!--Barra de navegación-->
     <!-- As a heading -->
-    <nav class="navbar navbar-ligth bg-primary ">
+    <nav class="navbar navbar-ligth bg-primary">
         <div class="container-fluid">
         <span class="navbar-brand mb-0 h1" style="color: white">Algoritmo greedy mochila ladrón</span>
         </div>

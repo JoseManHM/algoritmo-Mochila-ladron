@@ -1,5 +1,5 @@
 <!--Footer-->
-<footer class="text-center bg-primary text-white fixed-bottom">
+<footer class="text-center bg-primary text-white">
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); color:white">
           © 2021 ITPachuca: Ingeniería en Sistemas Computacionales

@@ -8,7 +8,13 @@
     <h4 id="resultados1" class="bg-info text-center mt-1 mb-2">
         Peso total robado:
     </h4>
+    <h5 id="timeEj" class="ms-2 mb-2">
+        El tiempo de ejecución es: 
+    </h5>
+
+    <a href="./index.php" class="btn btn-success stretched-link center ms-2 mb-4">Intentar de nuevo</a>
 <!--Tabla con datos recabados del algoritmo -->
+<div class="row container-fluid d-flex mt-2 mb-2 col-12">
     <h5 class="ms-2">Detalles del botín</h5>
     <table class="table" id="tabla">
     <thead>
@@ -22,12 +28,8 @@
         
     </tbody>
     </table>
+</div>
 
-    <h5 id="timeEj" class="ms-2">
-        El tiempo de ejecución es: 
-    </h5>
-
-    <a href="./index.php" class="btn btn-success stretched-link center ms-2">Intentar de nuevo</a>
     <script src="main.js"></script> 
 <!--Incluimos el footer de la página-->
 <?php
