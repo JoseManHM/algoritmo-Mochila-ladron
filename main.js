@@ -75,6 +75,10 @@ function calcularArt(){//Función que calcula los elementos a robar
     var resultado2 = document.createTextNode(sumaTotal+" Kg");
     resultados1.appendChild(resultado2);
     document.getElementById("resultados1").appendChild(resultados1);
+    var resultados2 = document.createElement("h4");//Se muestra el peso total del botín
+    var resultado3 = document.createTextNode(CapacidadCargaCostal+" Kg");
+    resultados2.appendChild(resultado3);
+    document.getElementById("resultados2").appendChild(resultados2);
     console.log(contenidoCostal);
     console.log("Cantidad robada: "+costo);
     //console.log("Suma total del peso: "+suma);
