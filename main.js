@@ -27,11 +27,18 @@ function calcularArt(){//Función que calcula los elementos a robar
         var articles = orden2[i][1].nombre;//Se obtienen los nombres de los articulos
         var pesoArticulo = orden2[i][1].peso;//Se obtiene el peso de cada articulo
         var costoUnitario = orden2[i][1].costo;//Se obtiene el costo de cada articulo
-            while(jsonOrdenado[i] <= costal && cantidad !== 0 && suma <= CapacidadCargaCostal){//Si el articulo cabe en la bolsa
+        //Impresiones en consola para debug
+        // console.log("Peso siguiente elemento: "+pesoArticulo);
+        // console.log("Costal: "+costal);
+        // console.log("Cantidad: "+cantidad);
+        // console.log("Suma: "+suma);
+        // console.log("Capacidad carga: "+CapacidadCargaCostal);
+            //while(jsonOrdenado[i] <= costal && cantidad !== 0 && suma <= CapacidadCargaCostal){//Si el articulo cabe en la bolsa
+            while(data[i].peso <= costal && cantidad !== 0 && suma <= CapacidadCargaCostal){//Si el articulo cabe en la bolsa
                 var newRow = document.createElement("tr");
                 contenidoCostal.push(jsonOrdenado[i]);//Se agrega cada articulo al arreglo de la bolsa
                 cantidad -= 1;
-                suma += contenidoCostal[i];
+                suma += pesoArticulo;
                 costal -= jsonOrdenado[i];
                 costo += orden2[i][1].costo;
                 console.log("Articulo robado: "+articles);//Se muestran los datos de los articulos robados en consola
