@@ -32,6 +32,7 @@
     <!-- As a heading -->
     <nav class="navbar navbar-ligth bg-primary">
         <div class="container-fluid">
-        <span class="navbar-brand mb-0 h1" style="color: white">Algoritmo greedy mochila ladrón</span>
+        <a class="navbar-brand" href="index.php" style="color: white;">Algortimo Greedy</a>
+        <a class="navbar-nav me-auto mb-2 mb-lg-0" href="main.php" style="color: white;">Iniciar algoritmo</a>
         </div>
     </nav>
